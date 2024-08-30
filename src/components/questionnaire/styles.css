@@ -1,0 +1,28 @@
+button {
+  width: 120px;
+  height: 45px;
+  font-family: "Karla", sans-serif;
+  font-size: large;
+  font-weight: bold;
+  border: 0px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  background: linear-gradient(
+    105deg,
+    rgba(0, 255, 229, 1) 0%,
+    rgba(255, 140, 0, 1) 50%,
+    rgba(255, 0, 128, 1) 100%
+  );
+  margin-top: 16px;
+}
+
+.buttonDiv {
+  display: flex;
+  gap: 40px;
+}
+
+button.skip {
+  color: white;
+  background: rgba(255, 0, 128, 1) 100%;
+}

@@ -1,0 +1,77 @@
+section.concepts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 4 equal columns */
+  gap: 50px; /* Space between grid items */
+  padding: 30px;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: linear-gradient(
+    105deg,
+    rgba(0, 255, 229, 1) 0%,
+    rgba(255, 140, 0, 1) 50%,
+    rgba(255, 0, 128, 1) 100%
+  );
+}
+
+input[type="submit"] {
+  grid-column: span 1; /* Span one column by default */
+  grid-row: span 4; /* Span 4 rows */
+  text-align: center;
+}
+
+.grid-item {
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid-item > label {
+  cursor: pointer;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: row;
+  gap: 120px;
+}
+
+.buttonContainer button {
+  width: 120px;
+  height: 45px;
+  font-family: "Karla", sans-serif;
+  font-size: large;
+  font-weight: bold;
+  border: 0px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.yesButton {
+  color: rgb(0, 0, 0);
+  background: rgba(0, 255, 157, 0.7) 100%;
+}
+
+.yesButton:disabled {
+  color: rgb(0, 0, 0);
+  background: rgba(170, 255, 222, 0.7) 100%;
+}
+
+.noButton {
+  color: rgb(240, 240, 240);
+  background: rgba(255, 0, 128, 1) 100%;
+}
+
+.noButton:disabled {
+  color: rgb(240, 240, 240);
+  background: rgb(255, 165, 210) 100%;
+}
