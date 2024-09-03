@@ -23,7 +23,7 @@ function App() {
 
   useEffect(() => {
     // Fetch the CSV file
-    fetch("/concepts.csv")
+    fetch("https://ferran98campos.github.io/thesis-questionnaire/concepts.csv")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
