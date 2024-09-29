@@ -40,6 +40,16 @@ const ResultsComponent: React.FC<ResultsComponentProps> = ({
 
     data[0] = participantID ? participantID.toString() : "UNDEFINED";
 
+    data.push(
+      [
+        numCorrects,
+        numIncorrects,
+        numSkipped,
+        totalTime / concepts.length,
+        totalTime,
+      ].join(";")
+    );
+
     concepts.forEach((concept, index) => {
       concept.chosenDefinition === concept.correctDefinitionIndex
         ? numCorrects++
@@ -60,16 +70,6 @@ const ResultsComponent: React.FC<ResultsComponentProps> = ({
           : "",
       ].join(";");
     });
-
-    data.push(
-      [
-        numCorrects,
-        numIncorrects,
-        numSkipped,
-        totalTime / concepts.length,
-        totalTime,
-      ].join(";")
-    );
 
     // Join the headers and values with commas and newlines to create the CSV string
     return data.join("\n");
